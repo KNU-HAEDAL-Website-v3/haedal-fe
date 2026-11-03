@@ -1,10 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import {createRoot} from 'react-dom/client';
+import App from './app/App';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+    throw new Error('앱을 마운트할 #root 요소를 찾을 수 없습니다.');
+}
+
+createRoot(rootElement).render(<App />);
