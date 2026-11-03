@@ -36,8 +36,9 @@ export function Header({section}: {section: string}) {
             </button>
             <nav id="main-nav" aria-label="주 메뉴" className={menuOpen ? 'open' : undefined}>
                 {NAV_LINKS.map(link => {
-                    const active = link.route === section;
-                    return <a key={link.route} href={`#${link.route}`} className={active ? 'active' : undefined} aria-current={active ? 'page' : undefined}>{link.label}</a>;
+                    const href = link.href ?? `#${link.route}`;
+                    const active = link.route !== undefined && link.route === section;
+                    return <a key={href} href={href} className={active ? 'active' : undefined} aria-current={active ? 'page' : undefined}>{link.label}</a>;
                 })}
             </nav>
             <button className="small" onClick={openLogin}>로그인</button>

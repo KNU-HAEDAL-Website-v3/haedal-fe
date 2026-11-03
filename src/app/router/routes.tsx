@@ -34,7 +34,8 @@ export const NAV_LINKS = [
     {route: highlightsFeature.route, label: '소식'},
     {route: noticeFeature.route, label: '공지'},
     {route: contributingFeature.route, label: '기여'},
-    {route: rentalFeature.route, label: '서비스'}
+    {route: rentalFeature.route, label: 'rendal'},
+    {href: 'https://ondal.knu-haedal-dev.com', label: 'ondal'}
 ];
 
 export interface ResolvedRoute {
