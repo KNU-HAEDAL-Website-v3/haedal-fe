@@ -1444,10 +1444,10 @@ a.schedule-row:hover {
     --color-surface-hover: #1a2358;
 
     --px: 2px;
-    --fill: rgba(13, 19, 60, .58);
-    --fill-hover: rgba(24, 33, 92, .68);
+    --fill: rgba(13, 19, 60, .78);
+    --fill-hover: rgba(24, 33, 92, .86);
     --edge-hi: rgba(196, 208, 255, .34);
-    --edge-lo: rgba(196, 208, 255, .07);
+    --edge-lo: rgba(196, 208, 255, .12);
     --spot: rgba(255, 217, 142, .14);
     --spot-edge: rgba(255, 217, 142, .9);
     --notch: polygon(
@@ -1593,6 +1593,7 @@ a.schedule-row::before,
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask-composite: exclude;
     pointer-events: none;
 }
 
@@ -1678,7 +1679,7 @@ a.schedule-row:hover::after, .card:hover::after, .join:hover::after {
 }
 
 .track.quote {
-    --fill-now: rgba(40, 34, 70, .6);
+    --fill-now: rgba(40, 34, 70, .8);
 }
 
 .track-icon {
@@ -1738,7 +1739,7 @@ summary::after {
 }
 
 .join {
-    --fill-now: rgba(20, 24, 72, .62);
+    --fill-now: rgba(20, 24, 72, .82);
 }
 
 .join h2 {
